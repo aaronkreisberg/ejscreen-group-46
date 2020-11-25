@@ -1,0 +1,23 @@
+---
+title: "Group 46 CA pollution burden"
+author: "Aaron Kreisberg/Hanna Weyland"
+date: "11/24/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(janitor)
+library(here)
+```
+
+
+In a code chunk below, the ces3demographics.csv data will be read in as object **ces** using a relative file path with the here()
+
+```{r}
+ces <- read.csv(here("data", "ces3demographics.csv")) %>% 
+  clean_names() #The ces data is modified with the clean_names() so column names are in lower snake case
+```
+
