@@ -25,7 +25,9 @@ Here I will make a scatterplot of CalEnviroScreen pollution burden score vs % wh
 ```{r}
 ggplot(data = ces, aes(x= white, y = ces_3_0_score)) +
   geom_hex() +
-  labs(x = "Percentage of Population Identifiying as White", y = "CES 3.0 Score")
+  labs(x = "Percentage of Population Identifiying as White", y = "CES 3.0 Score") +
+  scale_fill_gradient(low = "darkorchid4", high = "magenta") +
+  theme_minimal()
   
 ```
 
