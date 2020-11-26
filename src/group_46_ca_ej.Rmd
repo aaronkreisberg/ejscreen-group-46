@@ -23,11 +23,11 @@ ces <- read.csv(here("data", "ces3demographics.csv")) %>%
 
 Here I will make a scatterplot of CalEnviroScreen pollution burden score vs % white
 ```{r}
-ggplot(data = ces, aes(x= white, y = ces_3_0_score)) +
-  geom_hex() +
-  labs(x = "Percentage of Population Identifiying as White", y = "CES 3.0 Score", title = "CES 3.0 Scores compared to White Percentage of population") +
-  scale_fill_gradient(low = "navy", high = "orange") +
-  theme_minimal()
+ggplot(data = ces, aes(x= white, y = ces_3_0_score)) + #ggplot to as part of visualizing data
+  geom_hex() + #geom_hex() replaces geom_point() to visualize the data
+  labs(x = "Percentage of Population Identifiying as White", y = "CES 3.0 Score", title = "CES 3.0 Scores Compared to White Percentage of population") + #Use labs()to give more descriptive titles 
+  scale_fill_gradient(low = "navy", high = "orange") + #Color update to "navy" and "orange" using scale_fill_gradient()
+  theme_minimal() #theme cahnged to minimal with theme_minimal()
  
 ```
 As the percentage of the population identifying as white increases, the pollution burden score decreases showing an inverse relationship between the variables. 
