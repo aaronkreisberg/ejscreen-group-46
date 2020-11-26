@@ -21,3 +21,10 @@ ces <- read.csv(here("data", "ces3demographics.csv")) %>%
   clean_names() #The ces data is modified with the clean_names() so column names are in lower snake case
 ```
 
+Here I will make a scatterplot of CalEnviroScreen pollution burden score vs % white
+```{r}
+ggplot(data = ces, aes(x= white, y = ces_3_0_score)) +
+  geom_point()
+  
+```
+
